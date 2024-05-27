@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lifeGameJs</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="modeSelection" class="menu draggable">
+        <button id="drawingModeButton" class="menu-button">Режим рисования</button>
+        <button id="randomModeButton" class="menu-button">Режим случайной генерации</button>
+    </div>
+    <div id="controls" class="controls draggable" style="display: none;">
+        <button id="startButton" class="control-button">Старт</button>
+        <button id="randomButton" class="control-button" style="display: none;">Случайная генерация</button>
+        <button id="clearButton" class="control-button">Очистить</button>
+        <button id="backToMenuButton" class="control-button">Вернуться в меню</button>
+        <div class="input-group">
+            <label for="sizeInput">Размер</label>
+            <input type="number" id="sizeInput" value="100" min="10" max="1000">
+        </div>
+        <div class="input-group">
+            <label for="cellSizeInput">Размер клетки</label>
+            <input type="number" id="cellSizeInput" value="10" min="5" max="50">
+        </div>
+        <div class="input-group">
+            <label for="speedInput">Скорость</label>
+            <input type="range" id="speedInput" min="100" max="2000" value="500" step="100">
+        </div>
+        <div id="generationTime" class="generation-time">Время генерации: 0 мс</div>
+    </div>
+    <div id="canvasContainer" class="canvas-container" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/drag.js"></script>
+</body>
+</html>
