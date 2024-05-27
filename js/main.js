@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('controls').style.display = 'block';
         document.getElementById('randomButton').style.display = 'none';
         document.getElementById('canvasContainer').style.display = 'flex';
-        game = new GameOfLife();
+        game = new LifeGameJs();
     });
 
     randomModeButton.addEventListener('click', () => {
